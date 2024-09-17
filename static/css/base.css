@@ -69,12 +69,12 @@ body {
 	top: 0;
 	left: 0;
 	position: fixed;
-	background: black !important;
+	background: whitesmoke !important;
 	z-index: -1;
 }
 
 .title-prod{
-    color: white;
+    color: black;
 }
 
 .shop-now-button:hover,
