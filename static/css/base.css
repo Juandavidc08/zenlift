@@ -63,6 +63,20 @@ body {
     color: white;
 }
 
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: black !important;
+	z-index: -1;
+}
+
+.title-prod{
+    color: white;
+}
+
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
