@@ -114,29 +114,34 @@ a.category-badge > span.badge:hover {
 }
 
 .btt-button {
-    position: fixed; /* Fixed position */
-    bottom: 20px; /* Distance from the bottom */
-    right: 20px; /* Distance from the right */
-    background-color: white; /* Button background */
-    border-radius: 50%; /* Circular button */
-    border: 1px solid #000; /* Border color */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Shadow effect */
-    display: flex; /* Center icon */
-    align-items: center; /* Center icon vertically */
-    justify-content: center; /* Center icon horizontally */
-    width: 50px; /* Width of the button */
-    height: 50px; /* Height of the button */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s; /* Smooth transition */
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    background-color: white; 
+    border-radius: 50%; 
+    border: 1px solid #000; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    width: 50px; 
+    height: 50px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
 }
 
 .btt-button:hover {
-    background-color: #f0f0f0; /* Change color on hover */
+    background-color: #f0f0f0; 
 }
 
 .btt-link {
-    color: black; /* Icon color */
-    font-size: 20px; /* Icon size */
+    color: black; 
+    font-size: 20px; 
+}
+
+.update-link,
+.remove-item {
+    cursor:pointer;
 }
 
 /* -------------------------------- Media Queries */
