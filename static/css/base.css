@@ -16,7 +16,7 @@ body {
     height: calc(100vh - 164px);
     color: #555;
     font-family: 'Lato';
-    padding-top: 250px;
+   
 }
 
 /* from Bulma */
@@ -271,15 +271,6 @@ input[name='q']::placeholder {
 	color: #17a2b8; /* text-info */
 }
 
-/* -------------------------------- Media Queries */
-
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
-}
-
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
@@ -293,51 +284,15 @@ input[name='q']::placeholder {
     .header-container {
         padding-top: 164px;
     }
+}
 
-/* Mobile-specific adjustments */
+/* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
-    body {
-        margin-top: 100px; /* Push body content down below the navbar */
-    }
-
     .header-container {
-        padding-top: 0 !important; /* Ensure no additional padding for mobile */
+        padding-top: 190px;
     }
 
-    .fixed-top-desktop-only {
-        position: relative; /* Prevent fixed navbar from overlapping */
-    }
-}
-
-@media (max-width: 991px) {
     body {
-        padding-top: 80px; /* Adjust this value if your navbar is taller */
+        height: calc(100vh - 116px);
     }
-}
-
-@media (max-width: 576px) {
-    body {
-        padding-top: 100px; /* Increased padding for small mobile screens */
-    }
-}
-
-/*THIS NEEED TO BE FIXED NOT WORKING!*/
-@media (min-width: 992px) {
-    body {
-        padding-top: 0; /* No extra padding for large screens */
-    }
-}
-
-/* For the container holding your content */
-.container-fluid {
-    padding-top: 20px; /* Extra spacing for content on all screen sizes */
-}
-
-/* Ensuring no element overlaps the navbar */
-.navbar-fixed-top {
-    z-index: 1030;
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
 }
