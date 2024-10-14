@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 class Trainer(models.Model):
     name = models.CharField(max_length=100)
     expertise = models.CharField(max_length=100)
-    bio = models.TextField()
+    bio = models.TextField(max_length=250)
 
     def __str__(self):
         return self.name
