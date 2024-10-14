@@ -338,7 +338,7 @@ input[name='q']::placeholder {
     }
 
     .nav-link {
-        padding: 0.15rem;
+        padding: 0.1rem;
     }
 
     .nav-link i.fa-lg {
@@ -412,16 +412,4 @@ input[name='q']::placeholder {
         padding: .5rem 1rem;
         font-size: 1.2rem;
     }
-}
-
-/* Navbar customization */
-.navbar {
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Adjust dropdown hover */
-.dropdown-item:hover {
-    background-color: #f8f9fa;
-    color: #007bff;
 }
