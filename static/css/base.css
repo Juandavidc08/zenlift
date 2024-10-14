@@ -41,7 +41,7 @@ body {
 #delivery-banner {
     background-color: black !important;
     color: white !important;
-    width: 100% !important;
+    width: 110% !important;
 }
 
 #delivery-banner h4 {
@@ -337,6 +337,10 @@ input[name='q']::placeholder {
         font-size: 2rem;
     }
 
+    .navbar{
+        padding: 0 !important;
+    }
+
     .nav-link {
         padding: 0.15rem;
     }
@@ -351,7 +355,7 @@ input[name='q']::placeholder {
     }
 
     #delivery-banner h4 {
-        width: 100%;
+        width: 108%;
         font-size: .9rem;
     }
 
