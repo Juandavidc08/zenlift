@@ -334,15 +334,18 @@ input[name='q']::placeholder {
     }
 
     .display-4.logo-font.text-black {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .nav-link {
-        padding: 0.1rem;
+        padding: 10px 0;
+        font-size: 1.2rem;
+        color: #333;
+        text-align: center;
     }
 
     .nav-link i.fa-lg {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     .navbar-toggler {
@@ -351,7 +354,7 @@ input[name='q']::placeholder {
     }
 
     #delivery-banner h4 {
-        font-size: .9rem;
+        font-size: .8rem;
     }
 
     .btn.btn-outline-black.rounded-0,
@@ -367,49 +370,5 @@ input[name='q']::placeholder {
 
     .increment-qty, .decrement-qty {
         padding: .25rem .5rem !important;
-    }
-}
-
-/* Adjustments for mobile (max-width: 768px) */
-@media (max-width: 768px) {
-    /* Navbar tweaks */
-    .navbar-nav {
-        width: 100%;
-        text-align: center;
-    }
-
-    .nav-item {
-        width: 100%;
-    }
-
-    .nav-link {
-        padding: 10px 0;
-        font-size: 1.2rem;
-        color: #333;
-        text-align: center;
-    }
-
-    .dropdown-menu {
-        width: 100%;
-        background-color: #fff;
-        border: none;
-    }
-
-    .dropdown-item {
-        font-size: 1rem;
-        padding: 12px 10px;
-        text-align: center;
-    }
-
-    /* Adjust logo size on smaller screens */
-    .display-4.logo-font.text-black {
-        font-size: 1.8rem;
-    }
-
-    /* Customize the toggle button */
-    .navbar-toggler {
-        border-color: #333;
-        padding: .5rem 1rem;
-        font-size: 1.2rem;
     }
 }
