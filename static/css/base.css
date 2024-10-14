@@ -38,6 +38,19 @@ body {
     width: fit-content;
 }
 
+.navbar {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0 !important;
+}
+
 #delivery-banner {
     background-color: black !important;
     color: white !important;
@@ -355,7 +368,7 @@ input[name='q']::placeholder {
     }
 
     #delivery-banner h4 {
-        width: 108%;
+        width: 110%;
         font-size: .9rem;
     }
 
