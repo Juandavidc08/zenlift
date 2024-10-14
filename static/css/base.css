@@ -334,18 +334,15 @@ input[name='q']::placeholder {
     }
 
     .display-4.logo-font.text-black {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     .nav-link {
-        padding: 10px 0;
-        font-size: 1.2rem;
-        color: #333;
-        text-align: center;
+        padding: 0.15rem;
     }
 
     .nav-link i.fa-lg {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 
     .navbar-toggler {
@@ -354,7 +351,8 @@ input[name='q']::placeholder {
     }
 
     #delivery-banner h4 {
-        font-size: .8rem;
+        width: 100%;
+        font-size: .9rem;
     }
 
     .btn.btn-outline-black.rounded-0,
