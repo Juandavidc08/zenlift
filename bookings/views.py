@@ -5,7 +5,7 @@ from .forms import AppointmentForm
 from django.contrib import messages
 
 # List trainers
-def trainers_list(request):
+def bookings(request):
     trainers = Trainer.objects.all()
     return render(request, 'bookings/trainers_list.html', {'trainers': trainers})
 
