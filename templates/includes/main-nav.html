@@ -1,6 +1,6 @@
 
 <div class="collapse navbar-collapse" id="main-nav">
-  <ul class="navbar w-auto mx-auto">
+  <ul class="navbar list-unstyled w-auto mx-auto">
     <li class="nav-item d-block d-md-none">
         <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'home' %}" id="home-link">
             Home
@@ -11,7 +11,7 @@
             Coaching
         </a>
           <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-              <a href="{% url 'products' %}" class="dropdown-item">1:1 Training Session</a>
+              <a href="{% url 'trainers_list' %}" class="dropdown-item">1:1 Training Session</a>
               <a href="{% url 'products' %}?category=e-book" class="dropdown-item ">E-books</a>
               <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
 
