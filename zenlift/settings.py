@@ -28,6 +28,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
+
 ALLOWED_HOSTS = ['8000-juandavidc08-zenlift-wv0zbuh58m3.ws.codeinstitute-ide.net', 'zenlift-bb4261ea5a00.herokuapp.com']
 
 CSRF_TRUSTED_ORIGINS = [
