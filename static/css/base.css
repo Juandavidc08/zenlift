@@ -38,6 +38,10 @@ body {
     width: fit-content;
 }
 
+h2.logo-font.title-prod {
+    padding: 20px !important;
+}
+
 .navbar {
     position: relative;
     display: -ms-flexbox;
