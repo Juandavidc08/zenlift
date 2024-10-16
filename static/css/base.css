@@ -13,7 +13,7 @@ button {
 body {
     background: url('/media/zenlifthome.jpeg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 164px);
+    height: calc(100vh - 200px);
     color: #555;
     font-family: 'Lato';
    
