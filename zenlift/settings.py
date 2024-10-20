@@ -23,6 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 #SECRET_KEY = 'django-insecure-e(#8@#8ea*^y*ar2*765s#0*t33x%mp$2$neq#xa+#q)fm)mn&'
+# -> Need to errase this !! <- actual secret key in heroku $iq9zj^(x2ogydrp#va#+h$-j2#2=6teh+or4f2#vfuwejpa(i
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -54,6 +55,7 @@ INSTALLED_APPS = [
     'bag',
     'checkout',
     'profiles',
+    'bookings',
 
     #Other
     'crispy_forms',
