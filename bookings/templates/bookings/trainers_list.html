@@ -1,21 +1,37 @@
 {% extends "base.html" %}
 {% load static %}
 
-
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
+    <div class="container-fluid bg-primary text-white py-5">
+        <div class="container text-center">
+            <h1 class="display-4">Choose Your Trainer</h1>
+            <p class="lead">Book an appointment with one of our expert trainers</p>
         </div>
     </div>
 {% endblock %}
 
 {% block content %}
-<h1>Choose a Trainer</h1>
-<ul>
-    {% for trainer in trainers %}
-        <li><a href="{% url 'book_appointment' trainer.id %}">{{ trainer.name }}</a></li>
-    {% endfor %}
-</ul>
-
+<div class="container my-5">
+    <div class="row">
+        <!-- Main Content: List of Trainers -->
+        <div class="col-12">
+            <div class="row">
+                {% for trainer in trainers %}
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100 shadow-sm">
+                            
+                            <!-- Trainer Info -->
+                            <div class="card-body text-center">
+                                <h5 class="card-title">{{ trainer.name }}</h5>
+                                <p class="card-text">{{ trainer.expertise }}</p>
+                                <p class="text-muted">{{ trainer.bio|truncatewords:20 }}</p>
+                                <a href="{% url 'book_appointment' trainer.id %}" class="btn btn-primary mt-3">Book Appointment</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

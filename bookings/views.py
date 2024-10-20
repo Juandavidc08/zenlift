@@ -18,11 +18,13 @@ def book_appointment(request, trainer_id):
         if form.is_valid():
             appointment = form.save(commit=False)
             appointment.user = request.user
+            appointment.trainer = trainer  # Link the appointment to the trainer
             appointment.save()
-            messages.success(request, 'Appointment booked successfully!')
+            messages.success(request, 'Your appointment has been successfully booked!')
             return redirect('appointment_confirmation', appointment_id=appointment.id)
     else:
-        form = AppointmentForm(initial={'trainer': trainer})
+        form = AppointmentForm()
+
     return render(request, 'bookings/book_appointment.html', {'form': form, 'trainer': trainer})
 
 # Appointment confirmation

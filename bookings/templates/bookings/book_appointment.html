@@ -1,6 +1,33 @@
-<h1>Book Appointment with {{ trainer.name }}</h1>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Book Appointment</button>
-</form>
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container-fluid bg-light py-5">
+        <div class="container text-center">
+            <h1 class="display-4">Book an Appointment with {{ trainer.name }}</h1>
+            <p class="lead">{{ trainer.expertise }}</p>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Appointment Form</h4>
+
+                    <!-- Form Start -->
+                    <form method="POST">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+
+                        <button type="submit" class="btn btn-primary btn-block">Confirm Appointment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
