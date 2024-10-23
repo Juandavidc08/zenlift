@@ -234,6 +234,18 @@ input[name='q']::placeholder {
     overflow-y: auto;
 }
 
+/* -------------------------------- bookings */
+.container-trainer {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-top: 50px;
+    padding-top: 3rem;  
+    padding-bottom: 3rem; 
+    color: #ffffff;
+    background-color: #f8f9fa;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
