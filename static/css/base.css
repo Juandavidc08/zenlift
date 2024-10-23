@@ -247,9 +247,13 @@ input[name='q']::placeholder {
 }
 
 .custom-display-4{
-    padding-top: 260px !important;
+    padding-top: 300px !important;
     background-color: #fafafa !important;
     color: #000 !important;
+}
+
+.pt-250 {
+    padding-top: 250px;
 }
 
 /* -------------------------------- Media Queries */

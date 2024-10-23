@@ -1,13 +1,12 @@
 {% extends "base.html" %}
 {% load static %}
 
-<link rel="stylesheet" href="{% static 'css/base.css' %}">
 
 {% block page_header %}
-    <div class="container-trainer">
-        <div class="container-trainer container text-center">
-            <h1 class="display-4 custom-display-4">Choose Your Trainer</h1>
-            <p class="lead text-dark bg-white">Book an appointment with one of our expert trainers</p>
+    <div class="container-traine pt-250r">
+        <div class="container-trainer container text-center pt-250">
+            <h1 class="display-4 custom-display-4 text-black bg-white pt-250">Choose Your Trainer</h1>
+            <p class="lead text-white bg-dark">Book an appointment with one of our expert trainers</p>
         </div>
     </div>
 {% endblock %}
@@ -20,7 +19,7 @@
             <div class="row">
                 {% for trainer in trainers %}
                     <div class="col-md-4 mb-4">
-                        <div class="card h-100 shadow-sm">
+                        <div class="card h-100 shadow-sm" style="padding-top: 50px;">
                             
                             <!-- Trainer Info -->
                             <div class="card-body text-center">
