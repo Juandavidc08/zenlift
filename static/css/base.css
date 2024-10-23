@@ -246,6 +246,12 @@ input[name='q']::placeholder {
     background-color: #f8f9fa;
 }
 
+.custom-display-4{
+    padding-top: 150px !important;
+    background-color: #fafafa !important;
+    color: #000 !important;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
