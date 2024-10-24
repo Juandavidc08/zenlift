@@ -431,7 +431,11 @@ input[name='q']::placeholder {
         font-size: 14px; /* Smaller font size for mobile */
     }
     .list-inline-item {
-        margin: 0 10px; /* Add horizontal spacing between items */
+        margin: 0 5px; /* Add horizontal spacing between items */
+    }
+    
+    .list-inline-item a {
+        padding: 5px; /* Add some padding for a larger click area, if needed */
     }
     
     .nav-link {
