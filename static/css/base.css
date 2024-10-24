@@ -430,4 +430,20 @@ input[name='q']::placeholder {
     .navbar .nav-link {
         font-size: 14px; /* Smaller font size for mobile */
     }
+    .list-inline-item {
+        margin: 0 10px; /* Add horizontal spacing between items */
+    }
+    
+    .nav-link {
+        padding: 10px 0; /* Add vertical padding for touch targets */
+    }
+    
+    .dropdown-menu {
+        min-width: 200px; /* Ensure dropdowns have a minimum width */
+    }
+    
+    .input-group {
+        margin-top: 5px; /* Add some spacing to the search form */
+    }
+    
 }
