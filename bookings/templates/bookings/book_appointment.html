@@ -23,21 +23,17 @@
     <div class="row justify-content-center">
         <div class="col-md-6">
             <div class="card shadow-sm">
-                <div class="card-body text-center">  <!-- Center text in card body -->
+                <div class="card-body text-center">
                     <h4 class="card-title mb-4">Appointment Form</h4>
 
                     <!-- Form Start -->
                     <form method="POST">
                         {% csrf_token %}
                         <div class="form-group">
-                            {{ form.as_p|safe }}
+                            {{ form.as_p }}  <!-- Renders the form fields, including the pre-filled trainer field -->
                         </div>
-
                         <button type="submit" class="btn btn-dark btn-block">Confirm Appointment</button>
                     </form>
-                </div>
-                <div class="facebook">
-
                 </div>
             </div>
         </div>
