@@ -44,19 +44,15 @@ h2.logo-font.title-prod {
 
 .navbar {
     position: relative;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -ms-flex-align: center;
     align-items: center;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 0 !important;
-}
-
-.navbar .nav-item {
-    padding: 10px 5px; /* Adjust spacing between items */
-}
-
-.navbar .dropdown-menu {
-    min-width: 150px; /* Ensure dropdowns are wide enough */
 }
 
 #delivery-banner {
