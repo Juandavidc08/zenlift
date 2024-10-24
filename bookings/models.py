@@ -14,6 +14,7 @@ class Appointment(models.Model):
     trainer = models.ForeignKey(Trainer, on_delete=models.CASCADE)
     date = models.DateField()
     time = models.TimeField()
+    payment_status = models.BooleanField(default=False)  # New field to track payment
 
     def __str__(self):
         return f"{self.user.username} - {self.trainer.name} on {self.date} at {self.time}"
