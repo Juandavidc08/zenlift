@@ -12,21 +12,21 @@ def trainers_list(request):
 # Book an Appointment
 @login_required
 def book_appointment(request, trainer_id):
-    trainer = get_object_or_404(Trainer, id=trainer_id)  # Get the selected trainer
+    trainer = get_object_or_404(Trainer, id=trainer_id)
     if request.method == 'POST':
         form = AppointmentForm(request.POST)
         if form.is_valid():
             appointment = form.save(commit=False)
-            appointment.user = request.user  # Link the user to the appointment
-            appointment.trainer = trainer  # Assign the trainer automatically
+            appointment.user = request.user  # Assign the logged-in user
+            appointment.trainer = trainer  # Assign the selected trainer
             appointment.save()
             messages.success(request, 'Your appointment has been successfully booked!')
             return redirect('appointment_confirmation', appointment_id=appointment.id)
     else:
-        # Pre-fill the form with the selected trainer
-        form = AppointmentForm(initial={'trainer': trainer})
+        form = AppointmentForm()
 
     return render(request, 'bookings/book_appointment.html', {'form': form, 'trainer': trainer})
+
 
 # Appointment Confirmation
 def appointment_confirmation(request, appointment_id):

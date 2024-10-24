@@ -26,12 +26,14 @@
                 <div class="card-body text-center">
                     <h4 class="card-title mb-4">Appointment Form</h4>
 
+                    <!-- Manually show the selected trainer's name, NOT a form field -->
+                    <p><strong>Trainer: {{ trainer.name }}</strong></p>
+                    
                     <!-- Form Start -->
                     <form method="POST">
                         {% csrf_token %}
-                        <div class="form-group">
-                            {{ form.as_p }}  <!-- Renders the form fields, including the pre-filled trainer field -->
-                        </div>
+                        {{ form.as_p }}
+
                         <button type="submit" class="btn btn-dark btn-block">Confirm Appointment</button>
                     </form>
                 </div>
