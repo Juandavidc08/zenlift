@@ -433,11 +433,13 @@ input[name='q']::placeholder {
     .list-inline-item {
         margin: 0 5px; /* Add horizontal spacing between items */
     }
-    
+
     .list-inline-item a {
         padding: 5px; /* Add some padding for a larger click area, if needed */
     }
-    
+    .list-inline-item:not(:last-child) {
+        margin: 0 !important;
+    }
     .nav-link {
         padding: 10px 0; /* Add vertical padding for touch targets */
     }
