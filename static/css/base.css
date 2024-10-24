@@ -259,6 +259,23 @@ input[name='q']::placeholder {
 .tp{
     top: 150px;
 }
+
+/* -------------------------------- Footer */
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer i {
+    color: black; /* Icon color */
+}
+
+.footer p {
+    margin-top: 5px; /* Space between icon and text */
+    color: black; /* Text color */
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
