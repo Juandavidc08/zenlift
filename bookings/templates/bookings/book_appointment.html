@@ -3,19 +3,17 @@
 
 {% block page_header %}
 <div class="container-fluid bg-light py-5">
+    <div class="container text-center"></div>
+</div>
+<div class="container-fluid bg-light py-5">
+    <div class="container text-center"></div>
+</div>
+<div class="container-fluid bg-light py-5">
     <div class="container text-center">
+        <h5 class="text-dark">Booking an Appointment with {{ trainer.name }}</h5>
+        <p class="lead text-dark">{{ trainer.expertise }}</p>
     </div>
 </div>
-<div class="container-fluid bg-light py-5"></div>
-    <div class="container text-center">
-    </div>
-    <div class="container-fluid bg-light py-5">
-        <div class="container text-center">
-            <h5 class="text-dark">Booking an Appointment with {{ trainer.name }}</h5>
-            <p class="lead text-dark">{{ trainer.expertise }}</p>
-        </div>
-    </div>
-    
 {% endblock %}
 
 {% block content %}
@@ -25,14 +23,20 @@
             <div class="card shadow-sm">
                 <div class="card-body text-center">
                     <h4 class="card-title mb-4">Appointment Form</h4>
-
-                    <!-- Manually show the selected trainer's name, NOT a form field -->
                     <p><strong>Trainer: {{ trainer.name }}</strong></p>
-                    
+
                     <!-- Form Start -->
                     <form method="POST">
                         {% csrf_token %}
-                        {{ form.as_p }}
+                        <div class="form-group">
+                            <label for="id_date">Select Date:</label>
+                            {{ form.date }} <!-- Date field will be rendered here -->
+                        </div>
+
+                        <div class="form-group">
+                            <label for="id_time">Select Time:</label>
+                            {{ form.time }} <!-- Time field will be rendered here -->
+                        </div>
 
                         <button type="submit" class="btn btn-dark btn-block">Confirm Appointment</button>
                     </form>
@@ -42,3 +46,29 @@
     </div>
 </div>
 {% endblock %}
+
+<!-- Include jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Include Bootstrap Datepicker CSS and JS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<!-- Include Bootstrap Timepicker CSS and JS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-timepicker/0.5.2/css/bootstrap-timepicker.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-timepicker/0.5.2/js/bootstrap-timepicker.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        // Initialize datepicker for the date field
+        $('#id_date').datepicker({
+            startDate: new Date(),  // Prevent past dates
+            autoclose: true,
+            todayHighlight: true
+        });
+
+        // Initialize timepicker for the time field
+        $('#id_time').timepicker({
+            showMeridian: false,  // Use 24-hour format
+            minuteStep: 30
+        });
+    });
+</script>
