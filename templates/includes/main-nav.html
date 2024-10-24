@@ -1,47 +1,46 @@
-
 <div class="collapse navbar-collapse" id="main-nav">
-  <ul class="navbar list-unstyled w-auto mx-auto">
-    <li class="nav-item d-block d-md-none">
-        <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'home' %}" id="home-link">
-            Home
-        </a>
-    </li>
+    <ul class="navbar list-unstyled w-auto mx-auto">
+      <li class="nav-item d-block d-md-none">
+          <a class="logo-font font-weight-bold nav-link text-black" href="{% url 'home' %}" id="home-link">
+              Home
+          </a>
+      </li>
+  
       <li class="nav-item dropdown">
-        <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="coaching" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Coaching
-        </a>
-          <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+          <a class="logo-font font-weight-bold nav-link text-black" href="#" id="coaching" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Coaching
+          </a>
+          <div class="dropdown-menu border-0" aria-labelledby="coaching">
               <a href="{% url 'trainers_list' %}" class="dropdown-item">1:1 Training Session</a>
-              <a href="{% url 'products' %}?category=e-book" class="dropdown-item ">E-books</a>
+              <a href="{% url 'products' %}?category=e-book" class="dropdown-item">E-books</a>
               <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
-
           </div>
       </li>
-
+  
       <li class="nav-item dropdown">
-          <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Men`s
+          <a class="logo-font font-weight-bold nav-link text-black" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Men's
           </a>
           <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
               <a href="{% url 'products' %}?category=t-shirt-tops-men" class="dropdown-item">T-shirts &amp; Tops</a>
               <a href="{% url 'products' %}?category=jogger-and-shorts,joggers-shorts-men" class="dropdown-item">Joggers &amp; Shorts</a>
               <a href="{% url 'products' %}?category=mens,hoddies" class="dropdown-item">Hoodies</a>
-              <a href="{% url 'products' %}?category=t-shirt-tops-men,jogger-and-shorts,joggers-shorts-men,hoddies" class="dropdown-item">All Men'sClothing</a>
+              <a href="{% url 'products' %}?category=t-shirt-tops-men,jogger-and-shorts,joggers-shorts-men,hoddies" class="dropdown-item">All Men's Clothing</a>
           </div>
       </li>
-
+  
       <li class="nav-item dropdown">
-          <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="homeware-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="logo-font font-weight-bold nav-link text-black" href="#" id="homeware-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Women's
           </a>
-          <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-            <a href="{% url 'products' %}?category=t-shirt-tops-women" class="dropdown-item">T-shirts &amp; Tops</a>
-            <a href="{% url 'products' %}?category=joggers-shorts-women" class="dropdown-item">Joggers &amp; Shorts</a>
-            <a href="{% url 'products' %}?category=womens,hoddies" class="dropdown-item">Hoodies</a>
-            <a href="{% url 'products' %}?category=joggers-shorts-women,t-shirt-tops-women,hoddies" class="dropdown-item">All Women's Clothing</a>
+          <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
+              <a href="{% url 'products' %}?category=t-shirt-tops-women" class="dropdown-item">T-shirts &amp; Tops</a>
+              <a href="{% url 'products' %}?category=joggers-shorts-women" class="dropdown-item">Joggers &amp; Shorts</a>
+              <a href="{% url 'products' %}?category=womens,hoddies" class="dropdown-item">Hoodies</a>
+              <a href="{% url 'products' %}?category=joggers-shorts-women,t-shirt-tops-women,hoddies" class="dropdown-item">All Women's Clothing</a>
           </div>
       </li>
-
+  
       <li class="nav-item dropdown">
           <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Accessories
@@ -49,8 +48,9 @@
           <div class="dropdown-menu border-0" aria-labelledby="specials-link">
               <a href="{% url 'products' %}?category=gym-equipment" class="dropdown-item">Gym Equipment</a>
               <a href="{% url 'products' %}?category=yoga-equipment" class="dropdown-item">Yoga Equipment</a>
-              <a href="{% url 'products' %}?category=vitamins-and-supplements" class="dropdown-item">Vitamins  &amp; Supplements</a>
+              <a href="{% url 'products' %}?category=vitamins-and-supplements" class="dropdown-item">Vitamins &amp; Supplements</a>
           </div>
       </li>
-  </ul>
-</div>
+    </ul>
+  </div>
+  

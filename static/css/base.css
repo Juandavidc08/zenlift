@@ -44,15 +44,19 @@ h2.logo-font.title-prod {
 
 .navbar {
     position: relative;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -ms-flex-align: center;
     align-items: center;
-    -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 0 !important;
+}
+
+.navbar .nav-item {
+    padding: 10px 5px; /* Adjust spacing between items */
+}
+
+.navbar .dropdown-menu {
+    min-width: 150px; /* Ensure dropdowns are wide enough */
 }
 
 #delivery-banner {
@@ -414,5 +418,20 @@ input[name='q']::placeholder {
 
     .increment-qty, .decrement-qty {
         padding: .25rem .5rem !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        flex-direction: column; /* Stack items on top of each other */
+        align-items: center;
+    }
+
+    .navbar .nav-item {
+        padding: 5px 0; /* Reduce padding for mobile */
+    }
+
+    .navbar .nav-link {
+        font-size: 14px; /* Smaller font size for mobile */
     }
 }
