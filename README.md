@@ -73,17 +73,17 @@ The logo and favicon capture ZenLift’s essence, featuring an icon symbolizing 
 
 ## Wireframes
 
-- Conceptual wire frame made as sketchs
+- Conceptual wireframe made as sketches while planning the project
 
-![Desktop Homepage Wireframe](documentation/images/mainpage.png)
+<div style="display: flex; justify-content: center; align-items: flex-start; gap: 20px;">
+    <div>
+        <img src="documentation/images/wireframeskecth.png" alt="Wireframe sketch 1" style="max-width: 300px;">
+    </div>
+    <div>
+        <img src="documentation/images/wireframeskecthone.png" alt="Wireframe sketch 2" style="max-width: 300px;">
+    </div>
+</div>
 
-- Desktop Search Wireframe
-
-![Desktop Search Detail Wireframe](documentation/images/searchpage.png)
-
-- Desktop Others Wireframe
-
-![Desktop Search Detail Wireframe](documentation/images/others.png)
 
 ## Database Plan
 
