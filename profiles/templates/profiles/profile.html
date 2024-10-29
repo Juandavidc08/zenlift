@@ -20,7 +20,7 @@
             <div class="col">
                 <hr>
                 <h2 class="logo-font mb-4">{{ profile }} Profile</h2>
-                <p>¡You're incledible!</p>
+                <p>¡You're incredible!</p>
                 <hr>
             </div>
         </div>
@@ -74,6 +74,38 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-12">
+                <h3 class="text-muted">Your Bookings</h3>
+                <div class="bookings-history table-responsive">
+                    <table class="table table-sm table-borderless">
+                        <thead>
+                            <tr>
+                                <th>Trainer</th>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for booking in profile.bookings.all %}
+                                <tr>
+                                    <td>{{ booking.trainer.name }}</td>
+                                    <td>{{ booking.date|date:"Y-m-d" }}</td>
+                                    <td>{{ booking.date|time:"H:i" }}</td>
+                                    <td>{{ booking.status }}</td>
+                                </tr>
+                            {% empty %}
+                                <tr>
+                                    <td colspan="4" class="text-center">No bookings found.</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
 
 {% block postloadjs %}
