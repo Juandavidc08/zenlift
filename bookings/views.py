@@ -79,7 +79,7 @@ def payment_success(request, appointment_id):
     appointment.save()
     
     messages.success(request, 'Payment successful! Your appointment is confirmed.')
-    return redirect('appointment_confirmation', appointment_id=appointment.id)
+    return redirect('appointment_confirmation', appointment_id=appointment.id, hide_footer=True)
 
 
 @login_required
