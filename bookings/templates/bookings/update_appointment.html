@@ -20,13 +20,17 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container" style="padding-top: 250px;">
-        <h2 class="logo-font">Update Appointment with {{ appointment.trainer.name }}</h2>
-        <form method="POST" class="mt-4">
-            {% csrf_token %}
-            {{ form|crispy }}
-            <button type="submit" class="btn btn-black mt-3">Update Appointment</button>
-        </form>
-        <a href="{% url 'profile' %}" class="btn btn-secondary mt-3">Cancel</a>
+    <div class="container update-appointment-container">
+        <div class="row">
+            <div class="col">
+                <h2 class="logo-font mb-4">Update Appointment with {{ appointment.trainer.name }}</h2>
+                <p class="text-muted">Please fill out the form below to update your appointment.</p>
+                <form method="POST" class="mt-3">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <button type="submit" class="btn btn-black rounded-0 text-uppercase">Update Appointment</button>
+                </form>
+            </div>
+        </div>
     </div>
 {% endblock %}
