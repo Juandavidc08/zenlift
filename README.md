@@ -73,7 +73,7 @@ The logo and favicon capture ZenLift’s essence, featuring an icon symbolizing 
 
 ## Wireframes
 
-- Desktop Homepage Wireframe
+- Conceptual wire frame made as sketchs
 
 ![Desktop Homepage Wireframe](documentation/images/mainpage.png)
 
@@ -84,3 +84,92 @@ The logo and favicon capture ZenLift’s essence, featuring an icon symbolizing 
 - Desktop Others Wireframe
 
 ![Desktop Search Detail Wireframe](documentation/images/others.png)
+
+## Database Plan
+
+The database plan for the "Street Seeker" app is straightforward, capturing essential information about users, bookings, checkout - payments, products, profiles -accounts. It outlines the type of data stored and indicates whether a field is a Primary or Foreign key where applicable.
+
+<p align="center">
+  <img src="documentation/images/databaseimage.png" alt="data-base">
+</p>
+
+### Entities and Attributes
+1. User
+- user_id (Primary Key): Integer, unique identifier for each user.
+- username: String, unique username for login.
+- email: String, unique email address.
+- password: String, hashed password for security.
+- first_name: String, user's first name.
+- last_name: String, user's last name.
+- is_active: Boolean, indicates if the user account is active.
+- is_staff: Boolean, indicates if the user has admin privileges.
+- date_joined: DateTime, timestamp of when the user account was created.
+2. Trainer
+- trainer_id (Primary Key): Integer, unique identifier for each trainer.
+- name: String, full name of the trainer.
+- expertise: String, area of expertise (e.g., strength training, nutrition).
+- bio: Text, detailed biography of the trainer.
+3. Appointment
+- appointment_id (Primary Key): Integer, unique identifier for each appointment.
+- user (Foreign Key): References the User table, linking to the user who booked the appointment.
+- trainer (Foreign Key): References the Trainer table, linking to the trainer for the appointment.
+- date: Date, the date of the appointment.
+- time: Time, the time of the appointment.
+- payment_status: Boolean, indicates whether payment has been made for the appointment.
+4. UserProfile
+- profile_id (Primary Key): Integer, unique identifier for each user profile.
+- user (One-to-One Foreign Key): References the User table, linking to the user.
+- default_phone_number: String, optional phone number for the user.
+- default_street_address1: String, optional primary address.
+- default_street_address2: String, optional secondary address.
+- default_town_or_city: String, optional city or town.
+- default_county: String, optional county.
+- default_postcode: String, optional postal code.
+- default_country: CountryField, user's default country (e.g., US).
+5. Booking
+- booking_id (Primary Key): Integer, unique identifier for each booking.
+- user_profile (Foreign Key): References the UserProfile table, linking to the user's profile.
+- appointment (Foreign Key): References the Appointment table, linking to the booked appointment.
+- booking_date: DateTime, timestamp of when the booking was created.
+- status: String, current status of the booking (e.g., confirmed, cancelled).
+6. Order
+- order_id (Primary Key): Integer, unique identifier for each order.
+- order_number: String, unique order number generated using UUID.
+- user_profile (Foreign Key): References the UserProfile table, linking to the user making the order.
+- full_name: String, full name of the user.
+- email: EmailField, user's email address.
+- phone_number: String, user's phone number.
+- country: CountryField, user's selected country.
+- postcode: String, user's postal code.
+- town_or_city: String, city or town of the user.
+- street_address1: String, primary address.
+- street_address2: String, optional secondary address.
+- county: String, optional county.
+- date: DateTime, timestamp of when the order was created.
+- delivery_cost: Decimal, cost of delivery.
+- order_total: Decimal, total cost of items ordered.
+- grand_total: Decimal, total amount including delivery costs.
+- original_bag: Text, serialized data of the user's cart.
+- stripe_pid: String, unique identifier for the Stripe payment.
+7. OrderLineItem
+- lineitem_id (Primary Key): Integer, unique identifier for each line item.
+- order (Foreign Key): References the Order table, linking to the corresponding order.
+- product (Foreign Key): References the Product table, linking to the purchased product.
+- product_size: String, size of the product (optional).
+- quantity: Integer, quantity of the product ordered.
+- lineitem_total: Decimal, total cost for the line item.
+
+### Relationships
+
+- A User can have one UserProfile.
+- A User can book multiple Appointments.
+- A Trainer can have multiple Appointments.
+- A UserProfile can have multiple Bookings.
+- Each Booking is associated with one Appointment.
+- A UserProfile can have multiple Orders.
+- Each Order can have multiple OrderLineItems.
+- Each OrderLineItem is linked to a specific Product.
+
+<p align="center">
+  <img src="documentation/images/erd.png" alt="entity relationship">
+</p>
