@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required
 
 
 from .models import UserProfile
+from bookings.models import Appointment
 from .forms import UserProfileForm
 
 from checkout.models import Order
@@ -12,6 +13,8 @@ from checkout.models import Order
 def profile(request):
     """ Display the user's profile. """
     profile = get_object_or_404(UserProfile, user=request.user)
+
+    appointments = Appointment.objects.filter(user=request.user)
 
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)
@@ -28,6 +31,7 @@ def profile(request):
     context = {
         'form': form,
         'orders': orders,
+        'appointments': appointments,
         'on_profile_page': True
     }
 
