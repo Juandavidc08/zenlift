@@ -241,7 +241,7 @@ here are share some of the most importat screen display of the app
 
 This project was designed using Agile methodology, utilising the Project Board and Issues sections in GitHub
 
-- [Project Board](https://github.com/users/Juandavidc08/projects/6)
+- [Project Board](https://github.com/users/Juandavidc08/projects/7/views/1)
 
 # Testing Process
 
@@ -320,18 +320,6 @@ The project underwent thorough testing throughout development, with each feature
 - While attempting to create a new app in Heroku, conflicts arose due to the existing deployment. To resolve this:
   - I ensured that the new app did not overlap with the current deployment.
   - Reviewed the Heroku configuration to avoid conflicts with the existing resources.
-
-  ## Validation Testing
-
-### HTML & CSS
-
-HTML testing was completed using [W3 Validator](https://validator.w3.org/)
-
-![HTML Validation](/workspace/streetseekerapp/documentation/images/htmlvalidator.png)
-
-CSS testing was completed using [W3 Validator](https://jigsaw.w3.org/css-validator/)
-
-![CSS Validation](documentation/images/cssvalidator.png)
 
 ### Github Deployment
 
