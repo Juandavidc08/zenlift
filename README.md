@@ -70,3 +70,17 @@ The primary font is Montserrat, chosen for its modern, clean style and readabili
 ## Logo and Favicon
 
 The logo and favicon capture ZenLift’s essence, featuring an icon symbolizing strength or growth, aligning with the fitness and wellness focus.
+
+## Wireframes
+
+- Desktop Homepage Wireframe
+
+![Desktop Homepage Wireframe](documentation/images/mainpage.png)
+
+- Desktop Search Wireframe
+
+![Desktop Search Detail Wireframe](documentation/images/searchpage.png)
+
+- Desktop Others Wireframe
+
+![Desktop Search Detail Wireframe](documentation/images/others.png)
