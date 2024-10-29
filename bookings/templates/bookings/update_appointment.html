@@ -1,11 +1,14 @@
 {% extends "base.html" %}
+{% load static %}
+
 {% block content %}
-    <div class="container">
-        <h2>Update Appointment with {{ appointment.trainer.name }}</h2>
-        <form method="POST">
+    <div class="container" style="padding-top: 150px;">
+        <h2 class="logo-font">Update Appointment with {{ appointment.trainer.name }}</h2>
+        <form method="POST" class="mt-4">
             {% csrf_token %}
             {{ form|crispy }}
-            <button type="submit" class="btn btn-primary">Update Appointment</button>
+            <button type="submit" class="btn btn-primary mt-3">Update Appointment</button>
         </form>
+        <a href="{% url 'profile' %}" class="btn btn-secondary mt-3">Cancel</a>
     </div>
 {% endblock %}
