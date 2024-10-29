@@ -22,17 +22,26 @@ class StripeWH_Handler:
         cust_email = order.email
         subject = render_to_string(
             'checkout/confirmation_emails/confirmation_email_subject.txt',
-            {'order': order})
+            {'order': order}
+        )
         body = render_to_string(
             'checkout/confirmation_emails/confirmation_email_body.txt',
-            {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
-        
-        send_mail(
-            subject,
-            body,
-            settings.DEFAULT_FROM_EMAIL,
-            [cust_email]
-        )        
+            {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL}
+        )
+
+        try:
+            send_mail(
+                subject,
+                body,
+                settings.DEFAULT_FROM_EMAIL,
+                [cust_email]
+            )
+            # Log successful email send
+            print(f'Confirmation email sent to {cust_email}.')
+        except Exception as e:
+            # Log any errors that occur
+            print(f'Error sending email to {cust_email}: {str(e)}')
+            
 
     def handle_event(self, event):
         """
