@@ -65,7 +65,11 @@ def payment(request, appointment_id):
 
         return redirect(session.url, code=303)
 
-    return render(request, 'bookings/payment.html', {'appointment': appointment})
+
+        return render(request, 'bookings/payment.html', {
+            'appointment': appointment,
+            'hide_footer': True,  
+        })
 
 
 @login_required
