@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
+from .views import update_appointment, delete_appointment
 
 urlpatterns = [
     path('', views.trainers_list, name='trainers_list'),
