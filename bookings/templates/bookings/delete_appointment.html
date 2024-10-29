@@ -1,14 +1,37 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
+    <style>
+        .delete-appointment-container {
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+        }
+        h2.logo-font {
+            color: #333; /* Darker color for better contrast */
+        }
+        p.text-muted {
+            color: #666; /* Slightly lighter color for text */
+        }
+    </style>
+{% endblock %}
+
 {% block content %}
-    <div class="container">
-        <h2 class="logo-font">Delete Appointment</h2>
-        <p>Are you sure you want to delete the appointment with {{ appointment.trainer.name }} on {{ appointment.date|date:"Y-m-d" }}?</p>
-        <form method="POST" class="mt-3">
-            {% csrf_token %}
-            <button type="submit" class="btn btn-black">Delete Appointment</button>
-        </form>
-        <a href="{% url 'profile' %}" class="btn btn-secondary mt-3">Cancel</a>
+    <div class="container delete-appointment-container" style="padding-top: 150px;">
+        <div class="row" style="padding-top: 150px;">
+            <div class="col">
+                <h2 class="logo-font mb-4">Delete Appointment</h2>
+                <p class="text-muted">Are you sure you want to delete the appointment with {{ appointment.trainer.name }} on {{ appointment.date|date:"Y-m-d" }}?</p>
+                <form method="POST" class="mt-3">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-black">Delete Appointment</button>
+                </form>
+                <div class="d-flex justify-content-end mt-3">
+                    <a href="{% url 'profile' %}" class="btn btn-secondary">Cancel</a>
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock %}
