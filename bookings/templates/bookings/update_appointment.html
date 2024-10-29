@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="container">
+        <h2>Update Appointment with {{ appointment.trainer.name }}</h2>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <button type="submit" class="btn btn-primary">Update Appointment</button>
+        </form>
+    </div>
+{% endblock %}

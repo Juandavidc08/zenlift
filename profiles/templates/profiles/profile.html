@@ -84,6 +84,7 @@
                                 <th>Date</th>
                                 <th>Time</th>
                                 <th>Status</th>
+                                <th>Actions</th> <!-- New column for actions -->
                             </tr>
                         </thead>
                         <tbody>
@@ -93,10 +94,17 @@
                                     <td>{{ appointment.date|date:"Y-m-d" }}</td>
                                     <td>{{ appointment.time|time:"H:i" }}</td>
                                     <td>{{ appointment.payment_status|yesno:"Paid,Unpaid" }}</td>
+                                    <td>
+                                        <a href="{% url 'update_appointment' appointment.id %}" class="btn btn-sm btn-primary">Update</a>
+                                        <form action="{% url 'delete_appointment' appointment.id %}" method="POST" style="display:inline;">
+                                            {% csrf_token %}
+                                            <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this booking?');">Delete</button>
+                                        </form>
+                                    </td>
                                 </tr>
                             {% empty %}
                                 <tr>
-                                    <td colspan="4" class="text-center">No bookings found.</td>
+                                    <td colspan="5" class="text-center">No bookings found.</td>
                                 </tr>
                             {% endfor %}
                         </tbody>

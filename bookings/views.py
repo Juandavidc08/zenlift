@@ -92,3 +92,29 @@ def payment_cancel(request):
 def appointment_confirmation(request, appointment_id):
     appointment = get_object_or_404(Appointment, id=appointment_id)  # Get the appointment details
     return render(request, 'bookings/appointment_confirmation.html', {'appointment': appointment})
+
+@login_required
+def update_appointment(request, appointment_id):
+    appointment = get_object_or_404(Appointment, id=appointment_id, user=request.user)
+    
+    if request.method == 'POST':
+        form = AppointmentForm(request.POST, instance=appointment)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Appointment updated successfully.')
+            return redirect('profile')  # Redirect to the profile page after updating
+    else:
+        form = AppointmentForm(instance=appointment)
+
+    return render(request, 'bookings/update_appointment.html', {'form': form, 'appointment': appointment})
+
+@login_required
+def delete_appointment(request, appointment_id):
+    appointment = get_object_or_404(Appointment, id=appointment_id, user=request.user)
+    
+    if request.method == 'POST':
+        appointment.delete()
+        messages.success(request, 'Appointment deleted successfully.')
+        return redirect('profile')  # Redirect to the profile page after deletion
+
+    return render(request, 'bookings/delete_appointment.html', {'appointment': appointment})
