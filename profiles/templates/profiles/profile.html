@@ -95,8 +95,8 @@
                                     <td>{{ appointment.time|time:"H:i" }}</td>
                                     <td>{{ appointment.payment_status|yesno:"Paid,Unpaid" }}</td>
                                     <td>
-                                        <a href="{% url 'update_appointment' appointment.id %}" class="btn btn-black btn-sm">Update</a>
-                                        <a href="{% url 'delete_appointment' appointment.id %}" class="btn btn-danger btn-sm">Delete</a>
+                                        <a href="{% url 'update_appointment' appointment.id %}" class="btn btn-secondary btn-sm">Update</a>
+                                        <a href="{% url 'delete_appointment' appointment.id %}" class="btn btn-black btn-sm">Delete</a>
                                     </td>
                                 </tr>
                             {% empty %}

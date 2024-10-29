@@ -1,13 +1,31 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
+    <style>
+        .update-appointment-container {
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+        }
+        h2.logo-font {
+            color: #333; /* Darker color for better contrast */
+        }
+        p.text-muted {
+            color: #666; /* Slightly lighter color for text */
+        }
+    </style>
+{% endblock %}
+
 {% block content %}
-    <div class="container" style="padding-top: 150px;">
+    <div class="container" style="padding-top: 250px;">
         <h2 class="logo-font">Update Appointment with {{ appointment.trainer.name }}</h2>
         <form method="POST" class="mt-4">
             {% csrf_token %}
             {{ form|crispy }}
-            <button type="submit" class="btn btn-primary mt-3">Update Appointment</button>
+            <button type="submit" class="btn btn-black mt-3">Update Appointment</button>
         </form>
         <a href="{% url 'profile' %}" class="btn btn-secondary mt-3">Cancel</a>
     </div>
