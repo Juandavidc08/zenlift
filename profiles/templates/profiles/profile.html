@@ -49,8 +49,7 @@
                             {% for order in orders %}
                                 <tr>
                                     <td>
-                                        <a href="{% url 'order_history' order.order_number %}"
-                                        title="{{ order.order_number }}">
+                                        <a href="{% url 'order_history' order.order_number %}" title="{{ order.order_number }}">
                                             {{ order.order_number|truncatechars:6 }}
                                         </a>
                                     </td>
@@ -88,12 +87,12 @@
                             </tr>
                         </thead>
                         <tbody>
-                            {% for booking in profile.bookings.all %}
+                            {% for appointment in appointments %}
                                 <tr>
-                                    <td>{{ booking.trainer.name }}</td>
-                                    <td>{{ booking.date|date:"Y-m-d" }}</td>
-                                    <td>{{ booking.date|time:"H:i" }}</td>
-                                    <td>{{ booking.status }}</td>
+                                    <td>{{ appointment.trainer.name }}</td>
+                                    <td>{{ appointment.date|date:"Y-m-d" }}</td>
+                                    <td>{{ appointment.time|time:"H:i" }}</td>
+                                    <td>{{ appointment.payment_status|yesno:"Paid,Unpaid" }}</td>
                                 </tr>
                             {% empty %}
                                 <tr>
