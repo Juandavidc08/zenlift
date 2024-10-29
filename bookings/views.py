@@ -65,11 +65,11 @@ def payment(request, appointment_id):
 
         return redirect(session.url, code=303)
 
-
-        return render(request, 'bookings/payment.html', {
-            'appointment': appointment,
-            'hide_footer': True,  
-        })
+    # This handles the GET request
+    return render(request, 'bookings/payment.html', {
+        'appointment': appointment,
+        'hide_footer': True,  
+    })
 
 
 @login_required
@@ -79,7 +79,7 @@ def payment_success(request, appointment_id):
     appointment.save()
     
     messages.success(request, 'Payment successful! Your appointment is confirmed.')
-    return redirect('appointment_confirmation', appointment_id=appointment.id, hide_footer=True)
+    return redirect('appointment_confirmation', appointment_id=appointment.id)
 
 
 @login_required
