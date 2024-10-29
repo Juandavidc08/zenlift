@@ -20,11 +20,23 @@ body {
 }
 
 /* mailchimp */
+#mc_embed_shell {
+    display: flex; /* Enables flexbox layout */
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 100vh; /* Full viewport height */
+}
+
 #mc_embed_signup {
-    background:#fff;
-    clear:left; 
-    font:14px Helvetica,Arial,sans-serif; 
-    width: 600px;}
+    background: #dadada;
+    clear: left;
+    font: 14px Helvetica, Arial, sans-serif;
+    width: 600px;
+    padding: 20px; /* Optional padding */
+    border-radius: 8px; /* Optional rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
 
 /* from Bulma */
 .icon {
