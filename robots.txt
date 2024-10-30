@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://zenlift-bb4261ea5a00.herokuapp.com/sitemap.xml
