@@ -1,5 +1,5 @@
 Welcome, 
-This has been the most dificult project i've done so far , stuggling in the fact that to become a good devoper my journey is just starting, this are the basics, at least I have been training them, because for bxecoming a good developer there are so many things that still needs to be learn , still I'm glad of the company Code Insitute provide me. is the best I can do and im happy and enjoy the process, thanks for taking the time to check what i've learn -J.D.C.
+This has been the most dificult project i've done so far , stuggling in the fact that to become a good devoper my journey is just starting, this are the basics, at least I have been training them, because for bxecoming a good developer there are so many things that still needs to be learn , still I'm glad of the company Code Insitute provide me. Still there are stuff i need to fix and improve is the best I can do and everything I do actully understand from what I have studied all this year, and im happy and enjoy the process, thanks for taking the time to check what i've learn -J.D.C.
 
 # ZenLift
 
