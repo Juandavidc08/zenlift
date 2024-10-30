@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
+from allauth.account.models import EmailAddress
 
 from .models import UserProfile
 from bookings.models import Appointment
@@ -53,3 +54,10 @@ def order_history(request, order_number):
     }
 
     return render(request, template, context)
+
+@login_required
+def confirm_email(request):
+    email_address = EmailAddress.objects.filter(user=request.user).first()
+    if email_address and not email_address.verified:
+        email_address.send_confirmation(request)
+    return render(request, "account/email_confirm.html")
